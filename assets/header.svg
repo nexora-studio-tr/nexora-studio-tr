@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Nexora — Useful tools. Inspectable work.</title>
+  <desc id="description">An original dark navy wordmark banner with a cyan geometric N and a connected evidence diagram.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1280" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101E31"/><stop offset="1" stop-color="#09111D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="871" y1="58" x2="1137" y2="270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DEBE5"/><stop offset="1" stop-color="#4A8FFF"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#9AB4D1" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect x="1" y="1" width="1278" height="318" rx="16" fill="url(#background)" stroke="#2B3A50" stroke-width="2"/>
+  <rect x="736" y="2" width="542" height="316" rx="14" fill="url(#grid)"/>
+  <rect x="54" y="43" width="7" height="7" rx="1.5" fill="#8DEBE5"/>
+  <text x="75" y="51" fill="#A9BED5" font-family="ui-monospace,Consolas,monospace" font-size="13" letter-spacing="2.3">INDEPENDENT OPEN SOURCE</text>
+  <text x="50" y="150" fill="#F5F8FC" font-family="Arial,Helvetica,sans-serif" font-size="85" font-weight="700" letter-spacing="7">NEXORA</text>
+  <text x="55" y="197" fill="#D6E2EF" font-family="Arial,Helvetica,sans-serif" font-size="25">Useful tools. Inspectable work.</text>
+  <path d="M55 238H670" stroke="#31445B"/>
+  <text x="55" y="273" fill="#A9BED5" font-family="ui-monospace,Consolas,monospace" font-size="12" letter-spacing="1.6">SELF-HOSTED SOFTWARE / EN + TR</text>
+  <g stroke="url(#accent)" stroke-width="17" stroke-linejoin="miter">
+    <path d="M889 205V84L1046 205V84"/>
+  </g>
+  <path d="M849 64H1086M849 224H1086" stroke="#405875" stroke-width="1"/>
+  <path d="M849 59V69M1086 59V69M849 219V229M1086 219V229" stroke="#8DEBE5" stroke-width="2"/>
+  <path d="M851 269H1111" stroke="#405875" stroke-width="2"/>
+  <circle cx="851" cy="269" r="5" fill="#8DEBE5"/>
+  <circle cx="981" cy="269" r="5" fill="#78BFF4"/>
+  <circle cx="1111" cy="269" r="5" fill="#4A8FFF"/>
+  <text x="834" y="294" fill="#A9BED5" font-family="ui-monospace,Consolas,monospace" font-size="10" letter-spacing="1.3">BUILD</text>
+  <text x="958" y="294" fill="#A9BED5" font-family="ui-monospace,Consolas,monospace" font-size="10" letter-spacing="1.3">VERIFY</text>
+  <text x="1088" y="294" fill="#A9BED5" font-family="ui-monospace,Consolas,monospace" font-size="10" letter-spacing="1.3">REFINE</text>
+</svg>
