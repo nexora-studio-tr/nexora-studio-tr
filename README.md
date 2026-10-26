@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nexora-studio-tr/nexora-studio-tr/main/assets/header.svg" alt="Nexora — Useful tools. Inspectable work." width="100%" />
+  <img src="https://raw.githubusercontent.com/nexora-studio-tr/nexora-studio-tr/main/assets/header.webp" alt="Nexora" width="100%" />
 </p>
 
 [English](README.md) · [Türkçe](README.tr.md)
