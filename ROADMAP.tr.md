@@ -2,18 +2,18 @@
 
 [English](ROADMAP.md) · [Profil](README.tr.md)
 
-Güncelleme: 27 Ekim 2026. Bu liste geliştirme sırasıdır; teslim tarihi veya performans vaadi değildir. Bir kullanılabilir geliştirme dilimi tamamlanınca sonraki uygulamaya geçilir.
+Güncelleme: 27 Ekim 2026. Beş kullanılabilir geliştirme sırayla tamamlandı. Aşağıdaki kapılar doğrulama ve mimari çalışmalarıdır; teslim tarihi veya performans vaadi içermez.
 
-| Öncelik | Ürün | Sonraki anlamlı sonuç |
+| Ürün | Yayımlanan geliştirme | Sıradaki anlamlı kapı |
 | :--- | :--- | :--- |
-| **Güncel geliştirme** | **VoiceBridge** | [Alpha.3](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.3): yönlendirmeli kurulum kontrolü ve kullanıcı incelemesiyle indirilen özel destek raporu. [Uygulama ve kontroller](https://github.com/nexora-studio-tr/voicebridge/pull/2). |
-| **Sıradaki mimari** | **ProofGate** | npm monorepolarında paket/bağımlılık grafiğini sabitleyen, etkilenen testleri seçen ve önce/sonra kanıtını paketlere bağlayan doğrulama tasarımı. Güncel destek tek npm paketiyle sınırlıdır. |
-| **Sonraki araştırma** | **ReproPack** | PostgreSQL hata tekrarlama durumunu yeniden başlatmalar arasında koruyan tasarım. Güncel snapshot'lar çalışan kayıt sisteminin ömrüyle sınırlıdır; başarılı demo kalıcı tekrar kanıtı değildir. |
-| **Kabul testi bekliyor** | **AccessLease** | Özel test sunucusunda gerçek erişim verme, süre sonu, dışarıdan rol değişikliği ve yeniden başlatmadan toparlanmayı sınama. Canlı kabul testi ertelenmiş durumdadır. |
-| **Deneysel** | **Nexora FrameLab** | İyileştirme veya FPS artışı iddiasından önce gerçek CS2 tekrar/kayıt/geri alma akışını doğrulayıp tanımlı donanımlarda sonuç toplama. Canlı oyun testi ertelenmiş durumdadır. |
+| **VoiceBridge** | [Alpha.4](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.4): kuyruk dahil altyazı aşama süreleri ve iki dilde açıklamalar. | Bağımsız kurulum; iki kişinin dil yönleri, çakışan konuşma, kişisel ses ve izin iptalini denemesi. Süreler mikrofon kaydını, Discord aktarımını ve tarayıcıda dinlemeyi kapsamaz. |
+| **ProofGate** | [Alpha.2](https://github.com/nexora-studio-tr/proofgate/releases/tag/v0.1.0-alpha.2): salt okunur workspace bağımlılık etki analizi. | Monorepo test çalıştırmaya geçmeden paketlere bağlı yürütme/kanıt mimarisini inceleme. Güncel çalıştırma tek npm/Vitest paketiyle sınırlı. |
+| **ReproPack** | [0.6.0-alpha.2](https://github.com/nexora-studio-tr/repropack/releases/tag/v0.6.0-alpha.2): kalan adımların silme denemeleri ve açık kısmi kanıt durumu. | Registry yeniden başladığında korunan PostgreSQL tekrar durumu ve bağımsız pilot. Güncel snapshot ömrü registry ile sınırlı. |
+| **AccessLease** | [Alpha.2](https://github.com/nexora-studio-tr/accesslease/releases/tag/v0.1.0-alpha.2): ilk bitişi değiştirmeyen, başka kişinin onayını gerektiren bağlantılı yenileme başvurusu. | Özel Discord sunucusunda gerçek erişim, süre sonu, yönetici müdahalesi ve yeniden başlatma kabul testi. Bu test ertelenmiş durumda. |
+| **Nexora FrameLab** | [Alpha.2](https://github.com/nexora-studio-tr/nexora-framelab/releases/tag/v0.1.0-alpha.2): içe aktarılan kayıtlarda kalite kontrollü, gözleme dayalı karşılaştırma. | FPS artışı veya iyileştirme iddiasından önce gerçek CS2 replay/kayıt/geri alma ve tanımlı donanım ölçümleri. Canlı oyun testi ertelenmiş durumda. |
 
 ## Kullanıcı doğrulamasında sıradaki kapı
 
-VoiceBridge için başka bir insanın bağımsız kurulumu ve iki ayrı kişinin iki çeviri yönünü, çakışan konuşmayı, kişisel sesi ve izin iptalini denemesi gerekiyor. Kurulum kontrolü bir durum görüntüsüdür; konuşma kalitesi veya gerçek test kanıtı değildir. [Betaya katıl](https://github.com/nexora-studio-tr/voicebridge/issues/1).
+Beta odağı VoiceBridge. İki ayrı kişi iki dil yönünü, çakışan konuşmayı, kişisel sesi ve izin iptalini denemeli. Kurulum kontrolleri ve altyazı aşama süreleri teşhise yardımcı olur; konuşma kalitesini, uçtan uca dinleme gecikmesini veya kapasiteyi kanıtlamaz. [Betaya katıl](https://github.com/nexora-studio-tr/voicebridge/issues/1).
 
-Her geliştirme; anlamlı testler, tekrarlanabilir kurulum, kaynak/sürüm kimliği ve Türkçe/İngilizce yönergelerle ilerler. Bir sonraki büyük genişletmenin mimarisi uygulamadan önce incelenir. Gerçek geri bildirimler ve tekrar üretilebilen hatalar bu sırayı değiştirebilir.
+Her sürüm anlamlı otomatik kontroller, kaynak/sürüm kimliği, kurulum yönergeleri ve Türkçe/İngilizce belgeler içerir. Bağımsız insan kabulü ve ertelenen canlı testler ayrıca belirtilir. Tekrar üretilebilir kullanıcı geri bildirimleri sonraki geliştirme önceliğini belirler.

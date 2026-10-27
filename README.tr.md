@@ -6,19 +6,21 @@
 
 Diller arasında kaybolan bir konuşma, hatayı yakalayamayan bir test, süresi dolmasına rağmen açık kalan bir yetki: kolayca gözden kaçan sorunlar için açık kaynak araçlar geliştiriyorum.
 
-Çalışmalarım **geliştirici araçları, Discord altyapısı ve performans ölçümü** üzerinde yoğunlaşıyor. Her projede Türkçe/İngilizce dokümantasyon, kurulum yönergeleri ve açıkça belirtilmiş doğrulama sınırları bulunuyor.
+Çalışmalarım **geliştirici araçları, Discord altyapısı ve performans ölçümü** üzerinde yoğunlaşıyor. Her projede Türkçe/İngilizce dokümantasyon, kurulum yönergeleri, otomatik testler ve açıkça belirtilmiş doğrulama sınırları bulunuyor.
 
 ## Seçili projeler
 
-| Proje | Çözdüğü sorun | Başlangıç |
+| Proje | Son sürümdeki anlamlı geliştirme | Sürüm |
 | :--- | :--- | :--- |
-| **[VoiceBridge](https://github.com/nexora-studio-tr/voicebridge)** | Discord için kişiye özel Türkçe ↔ İngilizce altyazı ve ses. Yerel modeller, konuşmacı izni ve kişisel dinleme. | [alpha.3 / beta](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.3) |
-| **[ProofGate](https://github.com/nexora-studio-tr/proofgate)** | Testin kod değişikliğini hatalı önceki sürümden ayırt edip etmediğini kontrol eder. Sınırlı mutasyon kanıtı, CLI ve MCP sunar. | [Salt okunur demo](https://proofgate-demo.onrender.com/) |
-| **[ReproPack](https://github.com/nexora-studio-tr/repropack)** | HTTP/PostgreSQL hata senaryolarını, aynı hata imzasını koruyan daha küçük ve doğrulanmış örneklere indirger. | [Etkileşimli demo](https://repropack-demo-4rq9.onrender.com/) |
-| **[AccessLease](https://github.com/nexora-studio-tr/accesslease)** | Geçici Discord erişimine bağımsız onay, izin önizlemesi ve doğrulanmış süre sonu ekler. | [alpha.1 / kurulum](https://github.com/nexora-studio-tr/accesslease/releases/tag/v0.1.0-alpha.1) |
-| **[Nexora FrameLab](https://github.com/nexora-studio-tr/nexora-framelab)** | Windows donanımını algılar, CS2 kare sürelerini analiz eder ve geri alınabilir ayar deneylerini değerlendirir. | [Deneysel Windows alpha](https://github.com/nexora-studio-tr/nexora-framelab/releases/tag/v0.1.0-alpha.1) |
+| **[VoiceBridge](https://github.com/nexora-studio-tr/voicebridge)** | Discord için kişisel Türkçe ↔ İngilizce altyazı ve ses. Altyazı başına aşama süreleriyle kuyruk, tanıma ve çeviri gecikmesini inceleme. | [0.1.0-alpha.4](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.4) |
+| **[ProofGate](https://github.com/nexora-studio-tr/proofgate)** | Kod değişikliği için test kanıtı ve bağımlılık gerekçeleriyle salt okunur workspace etki analizi. Test çalıştırma tek npm paketiyle sınırlı. | [0.1.0-alpha.2](https://github.com/nexora-studio-tr/proofgate/releases/tag/v0.1.0-alpha.2) |
+| **[ReproPack](https://github.com/nexora-studio-tr/repropack)** | HTTP/PostgreSQL hatalarını küçültür; kalan adımların silme denemelerini ve kısmi kanıt durumunu açıklayan kayıtlar sunar. | [0.6.0-alpha.2](https://github.com/nexora-studio-tr/repropack/releases/tag/v0.6.0-alpha.2) |
+| **[AccessLease](https://github.com/nexora-studio-tr/accesslease)** | Bağımsız onaylı geçici Discord erişimi, doğrulanmış süre sonu ve beklerken ilk bitişi değiştirmeyen bağlantılı yenileme başvurusu. | [0.1.0-alpha.2](https://github.com/nexora-studio-tr/accesslease/releases/tag/v0.1.0-alpha.2) |
+| **[Nexora FrameLab](https://github.com/nexora-studio-tr/nexora-framelab)** | Windows donanım algılama ve PresentMon kayıt karşılaştırması. Kalite kontrolleri, gözlenen farkı uyumsuz ölçümden ayırır. | [0.1.0-alpha.2 · Windows](https://github.com/nexora-studio-tr/nexora-framelab/releases/tag/v0.1.0-alpha.2) |
 
-**Sürüm kapsamı:** projeler erken aşamadadır. VoiceBridge çok kullanıcılı beta geri bildirimi bekliyor; AccessLease'in canlı Discord kabul testi henüz yapılmadı. FrameLab için canlı CS2 ölçümü veya kanıtlanmış FPS artışı yok. Demo verileri ve çalışma sınırları ilgili depolarda belirtiliyor.
+**Sürüm kapsamı:** bunlar doğrulama kayıtları ve SHA-256 dosyaları bulunan alpha sürümleridir. VoiceBridge bağımsız çok kullanıcılı beta geri bildirimi bekliyor; AccessLease'in canlı Discord kabul testi yapılmadı. FrameLab için canlı CS2 ölçümü veya kanıtlanmış FPS artışı yok. İçe aktarılan kayıt karşılaştırması ayar uygulayamaz.
+
+Sentetik verilerle **[ProofGate demosunu](https://proofgate-demo.onrender.com/)** ve **[ReproPack demosunu](https://repropack-demo-4rq9.onrender.com/)** inceleyebilir veya ilgili sürümün kurulum yönergelerini izleyebilirsin.
 
 ## Geliştirme yaklaşımım
 

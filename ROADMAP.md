@@ -2,18 +2,18 @@
 
 [Türkçe](ROADMAP.tr.md) · [Profile](README.md)
 
-Updated 27 October 2026. This is the development order, not a delivery-date or performance promise. One usable increment is completed before starting the next implementation.
+Updated 27 October 2026. Five usable increments were delivered sequentially. The next gates below are validation and architecture work, without delivery-date or performance promises.
 
-| Priority | Product | Next meaningful outcome |
+| Product | Released increment | Next meaningful gate |
 | :--- | :--- | :--- |
-| **Current delivery** | **VoiceBridge** | [Alpha.3](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.3): guided setup checks and a reviewed, private support report. [Implementation and checks](https://github.com/nexora-studio-tr/voicebridge/pull/2). |
-| **Next architecture** | **ProofGate** | Design workspace-aware verification for npm monorepos: freeze the package/dependency graph, select affected tests and bind before/after evidence to each package. Current support remains a single npm package. |
-| **Following research** | **ReproPack** | Design durable PostgreSQL replay state across restarts. Current snapshots are scoped to the running registry; a successful demo does not prove durable replay. |
-| **Acceptance pending** | **AccessLease** | Exercise real grant, expiry, external role changes and restart recovery in a dedicated Discord test server. The live acceptance test remains deferred. |
-| **Experimental** | **Nexora FrameLab** | Validate real CS2 replay/capture/recovery and collect results on named hardware before making tuning or FPS-gain claims. Live game testing remains deferred. |
+| **VoiceBridge** | [Alpha.4](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.4): queue-inclusive per-caption timings and bilingual stage explanations. | Independent installation and two-person language, overlap, playback and consent tests. Timings exclude capture, Discord transport and browser playback. |
+| **ProofGate** | [Alpha.2](https://github.com/nexora-studio-tr/proofgate/releases/tag/v0.1.0-alpha.2): read-only workspace dependency impact preflight. | Review package-bound execution/evidence architecture before implementing monorepo test execution. Current execution remains single-package npm/Vitest. |
+| **ReproPack** | [0.6.0-alpha.2](https://github.com/nexora-studio-tr/repropack/releases/tag/v0.6.0-alpha.2): retained-step deletion witnesses and explicit partial certification evidence. | Durable PostgreSQL replay across registry restarts and an independent pilot. Current snapshot lifetime remains registry-bound. |
+| **AccessLease** | [Alpha.2](https://github.com/nexora-studio-tr/accesslease/releases/tag/v0.1.0-alpha.2): linked renewals requiring independent approval, with unchanged original expiry. | Dedicated live Discord grant, expiry, administrator intervention and restart acceptance. This test remains deferred. |
+| **Nexora FrameLab** | [Alpha.2](https://github.com/nexora-studio-tr/nexora-framelab/releases/tag/v0.1.0-alpha.2): observational comparison of imported captures with explicit quality gates. | Live CS2 replay/capture/recovery and named-hardware measurements before any tuning or FPS-gain claim. Live game testing remains deferred. |
 
 ## Current user-validation gate
 
-VoiceBridge still needs an independent human installation and two distinct people testing both language directions, overlapping speech, personal playback and consent cancellation. Guided setup results are installation snapshots, not speech-quality or live-test evidence. [Join the beta](https://github.com/nexora-studio-tr/voicebridge/issues/1).
+VoiceBridge remains the beta focus. Two distinct people should test both language directions, overlapping speech, private playback and consent cancellation. Installation checks and per-caption stage timings help diagnosis; neither proves speech quality, end-to-end listening latency or capacity. [Join the beta](https://github.com/nexora-studio-tr/voicebridge/issues/1).
 
-Each increment carries meaningful tests, repeatable installation, source/release identity and English/Turkish instructions. Architecture for the next substantial expansion is reviewed before implementation. Actual feedback and reproducible failures determine changes to this order.
+Each release includes meaningful automated checks, source/release identity, installation instructions and English/Turkish documentation. Independent human acceptance and deferred live tests are identified separately. Reproducible user feedback determines the next implementation priority.

@@ -6,19 +6,21 @@
 
 I build open-source tools for problems that are easy to overlook: a conversation lost in translation, a test that proves too little, an access grant that never ends.
 
-The work spans **developer tooling, Discord infrastructure and performance measurement**. Each project includes English/Turkish documentation, setup instructions and explicit validation limits.
+The work spans **developer tooling, Discord infrastructure and performance measurement**. Each project includes English/Turkish documentation, setup instructions, automated tests and explicit validation limits.
 
 ## Selected work
 
-| Project | The problem it tackles | Start here |
+| Project | Latest useful increment | Release |
 | :--- | :--- | :--- |
-| **[VoiceBridge](https://github.com/nexora-studio-tr/voicebridge)** | Personal Turkish ↔ English captions and speech for Discord. Local models, per-speaker consent and private listening. | [alpha.3 / beta](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.3) |
-| **[ProofGate](https://github.com/nexora-studio-tr/proofgate)** | Check whether a test distinguishes a code change from its broken baseline, with bounded mutation evidence and CLI/MCP integration. | [Read-only demo](https://proofgate-demo.onrender.com/) |
-| **[ReproPack](https://github.com/nexora-studio-tr/repropack)** | Reduce failing HTTP/PostgreSQL scenarios to smaller, verified reproductions while preserving the failure signature. | [Interactive demo](https://repropack-demo-4rq9.onrender.com/) |
-| **[AccessLease](https://github.com/nexora-studio-tr/accesslease)** | Give temporary Discord access an independent approval, a permission preview and a verified expiry. | [alpha.1 / setup](https://github.com/nexora-studio-tr/accesslease/releases/tag/v0.1.0-alpha.1) |
-| **[Nexora FrameLab](https://github.com/nexora-studio-tr/nexora-framelab)** | Discover Windows hardware, inspect CS2 frame times and evaluate recoverable settings experiments. | [Experimental Windows alpha](https://github.com/nexora-studio-tr/nexora-framelab/releases/tag/v0.1.0-alpha.1) |
+| **[VoiceBridge](https://github.com/nexora-studio-tr/voicebridge)** | Personal Turkish ↔ English captions and speech for Discord. Per-caption stage timings make queue, recognition and translation delays inspectable. | [0.1.0-alpha.4](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.4) |
+| **[ProofGate](https://github.com/nexora-studio-tr/proofgate)** | Test evidence for a code change, plus read-only workspace impact preflight with dependency reasons. Execution remains limited to a single npm package. | [0.1.0-alpha.2](https://github.com/nexora-studio-tr/proofgate/releases/tag/v0.1.0-alpha.2) |
+| **[ReproPack](https://github.com/nexora-studio-tr/repropack)** | Smaller HTTP/PostgreSQL reproductions with deletion witnesses explaining the checks behind retained steps and partial evidence. | [0.6.0-alpha.2](https://github.com/nexora-studio-tr/repropack/releases/tag/v0.6.0-alpha.2) |
+| **[AccessLease](https://github.com/nexora-studio-tr/accesslease)** | Temporary Discord access with independent review, verified expiry and linked renewal requests that preserve the original deadline while pending. | [0.1.0-alpha.2](https://github.com/nexora-studio-tr/accesslease/releases/tag/v0.1.0-alpha.2) |
+| **[Nexora FrameLab](https://github.com/nexora-studio-tr/nexora-framelab)** | Windows hardware discovery and PresentMon capture comparison. Quality gates separate observed differences from incompatible measurements. | [0.1.0-alpha.2 · Windows](https://github.com/nexora-studio-tr/nexora-framelab/releases/tag/v0.1.0-alpha.2) |
 
-**Release scope:** these projects are early releases. VoiceBridge is seeking multi-user beta feedback; AccessLease's live Discord acceptance test is pending. FrameLab has no live CS2 benchmark or demonstrated FPS gain. Demo data and execution limits are identified in each repository.
+**Release scope:** these are alpha releases with validation records and checksums. VoiceBridge still needs independent multi-user beta feedback; AccessLease's live Discord acceptance test is pending. FrameLab has no live CS2 benchmark or demonstrated FPS gain. Imported capture comparisons cannot apply settings.
+
+Explore the synthetic **[ProofGate demo](https://proofgate-demo.onrender.com/)** and **[ReproPack demo](https://repropack-demo-4rq9.onrender.com/)**, or follow each tagged release's setup instructions.
 
 ## How I build
 
