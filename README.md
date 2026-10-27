@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/nexora-studio-tr/nexora-studio-tr/main/assets/header.webp" alt="Nexora" width="100%" />
 </p>
 
-[English](README.md) · [Türkçe](README.tr.md)
+[English](README.md) · [Türkçe](README.tr.md) · [Product roadmap](ROADMAP.md)
 
 I build open-source tools for problems that are easy to overlook: a conversation lost in translation, a test that proves too little, an access grant that never ends.
 
@@ -12,7 +12,7 @@ The work spans **developer tooling, Discord infrastructure and performance measu
 
 | Project | The problem it tackles | Start here |
 | :--- | :--- | :--- |
-| **[VoiceBridge](https://github.com/nexora-studio-tr/voicebridge)** | Personal Turkish ↔ English captions and speech for Discord. Local models, per-speaker consent and private listening. | [alpha.2 / beta](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.2) |
+| **[VoiceBridge](https://github.com/nexora-studio-tr/voicebridge)** | Personal Turkish ↔ English captions and speech for Discord. Local models, per-speaker consent and private listening. | [alpha.3 / beta](https://github.com/nexora-studio-tr/voicebridge/releases/tag/v0.1.0-alpha.3) |
 | **[ProofGate](https://github.com/nexora-studio-tr/proofgate)** | Check whether a test distinguishes a code change from its broken baseline, with bounded mutation evidence and CLI/MCP integration. | [Read-only demo](https://proofgate-demo.onrender.com/) |
 | **[ReproPack](https://github.com/nexora-studio-tr/repropack)** | Reduce failing HTTP/PostgreSQL scenarios to smaller, verified reproductions while preserving the failure signature. | [Interactive demo](https://repropack-demo-4rq9.onrender.com/) |
 | **[AccessLease](https://github.com/nexora-studio-tr/accesslease)** | Give temporary Discord access an independent approval, a permission preview and a verified expiry. | [alpha.1 / setup](https://github.com/nexora-studio-tr/accesslease/releases/tag/v0.1.0-alpha.1) |
