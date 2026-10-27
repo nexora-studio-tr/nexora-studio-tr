@@ -16,7 +16,7 @@ Güncelleme: 27 Ekim 2026. Beş kullanılabilir geliştirme sırayla tamamlandı
 
 1. **VoiceBridge: iki bağımsız temiz kurulum.** Gönüllülerin kurulum raporları incelenip kabul edilen kanıtlar [beta kaydına](https://github.com/nexora-studio-tr/voicebridge/blob/main/docs/BETA-STATUS.md) işlenecek. Yalnızca kayıtlı demoyu çalıştırmak yeterli sayılmaz. Henüz incelenmiş bağımsız kurulum sonucu iddia edilmiyor.
 2. **VoiceBridge: aynı gerçek odada iki ayrı insan.** İki dil yönü, çakışan konuşma, kişisel ses ve izin iptali denenecek. Bu kapı kurulum başarısından ayrıdır. [Betaya katıl](https://github.com/nexora-studio-tr/voicebridge/issues/1).
-3. **Bakım:** [sekiz bağımlılık PR'ının incelemesini](MAINTENANCE.tr.md) izle. Kontrolleri geçen iki Actions güncellemesi, sahibinin ayrıca onaylayacağı bakım paketine aday. Eski başarısız dallar güncel tabanda yeniden kontrol edilmeli; Node 26 tip güncellemeleri beklemede. Bu inceleme PR'ları birleştirmez.
+3. **Bakım:** onaylanan iki Actions güncellemesi birleştirildi; ana dal CI bağlantıları [bağımlılık kaydında](MAINTENANCE.tr.md). Sıradaki öneri, eski tabanlı dört Actions dalını güncelleyip birleştirmeden önce güncel CI sonuçlarını doğrulamak. Node 26 tip yükseltmeleri birleştirilmeden bekliyor. Yeni değişiklikler ayrı onaylı paket gerektirir.
 
 Geri bildirim toplanırken diğer dört ürünün odağı bakım. Yeni ürün kapsamları ve büyük mimari değişiklikler [yönetim rehberine](GOVERNANCE.tr.md) göre ayrıca kararlaştırılır.
 

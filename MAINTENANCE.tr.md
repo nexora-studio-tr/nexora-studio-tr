@@ -2,11 +2,26 @@
 
 [English](MAINTENANCE.md) · [Yol haritası](ROADMAP.tr.md) · [Yönetim](GOVERNANCE.tr.md)
 
-ProofGate ve ReproPack'teki sekiz açık Dependabot PR'ı incelendi. Bu tarihli bir karar kaydıdır; PR commit'leri ve CI değişebilir. **Bu inceleme kapsamında hiçbir PR birleştirilmedi, kapatılmadı veya yeniden tabanlanmadı.** İnceleme, acil yükseltme gerektiren doğrulanmış bir güvenlik açığı saptamadı.
+İlk salt okunur inceleme, ProofGate ve ReproPack'teki sekiz açık Dependabot PR'ını kapsıyordu. Ardından sahibi aşağıdaki iki değişikliği onayladı. İlk inceleme kaydı izlenebilirlik için korundu; PR commit'leri ve CI değişebilir. İlk inceleme, acil yükseltme gerektiren doğrulanmış bir güvenlik açığı saptamadı.
+
+## Uygulanan bakım
+
+Onaylanan iki değişiklik sırayla birleştirildi. Bağlantılar birleştirme commit'ini ve ilgili ana dal doğrulamasını gösterir.
+
+| Değişiklik                                                                                  | Birleştirme commit'i                                                                                       | Ana dal CI                                                                                                              |
+| :------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| [ProofGate #1](https://github.com/nexora-studio-tr/proofgate/pull/1): upload-artifact 7.0.2 | [`447891e`](https://github.com/nexora-studio-tr/proofgate/commit/447891e1581d408c1052ab7a0eb49543989cb05e) | [Windows, Ubuntu, tarayıcı ve çalıştırma](https://github.com/nexora-studio-tr/proofgate/actions/runs/40574993962)       |
+| [ReproPack #2](https://github.com/nexora-studio-tr/repropack/pull/2): checkout 7.0.1        | [`2ee039d`](https://github.com/nexora-studio-tr/repropack/commit/2ee039ddf2c5e4ca6e83e9cfa71075cf94310bce) | [Windows, Ubuntu, tarayıcı, sandbox ve dağıtım](https://github.com/nexora-studio-tr/repropack/actions/runs/40575567120) |
+
+ProofGate'in iki PR artifact ZIP'i indirilip GitHub SHA-256 değerleriyle doğrulandı. Beklenen Docker, yalıtım, entegrasyon, MCP, dağıtım ve tarayıcı raporları ile ekran görüntüleri mevcut; iki artifact adı birleştirme sonrası ana dalda da kontrol edildi. ReproPack tam action commit sabitlemesini ve `persist-credentials: false` değerini koruyor. Çalışma sürümleri ve etiketli sürüm dosyaları değişmedi. Yeni etiketli yayın başlatılmadı; yayın iş akışındaki checkout değişikliği yapılandırma üzerinden incelendi.
+
+Kalan dört Actions PR'ı ve iki Node 26 tip PR'ı bu bakım paketinde değiştirilmedi. Sonraki işlemleri ayrı onaylı kapsam ve güncel kanıt gerektirir.
+
+## İlk inceleme kaydı
 
 Karşılaştırma tabanı: ProofGate main [`bd22f4b`](https://github.com/nexora-studio-tr/proofgate/commit/bd22f4ba2fec906d248261281ea6ee0b13e69473), ReproPack main [`bc90cd0`](https://github.com/nexora-studio-tr/repropack/commit/bc90cd0616dce3b168bf3e75b9336a70bd132ed6). “Güncel taban” bu commit'leri gösterir. CI bağlantıları, belirtilen PR commit'i ile o sıradaki birleştirme tabanında çalışmıştır.
 
-## Öneriler
+### İnceleme anındaki öneriler
 
 | PR                                                                   | Değişiklik                    | İncelenen commit | CI kanıtı                                                                                         | Sonraki işlem                                                                                                        |
 | :------------------------------------------------------------------- | :---------------------------- | :--------------- | :------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------- |
@@ -28,6 +43,6 @@ Karşılaştırma tabanı: ProofGate main [`bd22f4b`](https://github.com/nexora-
 - **Eski ReproPack hataları:** [upload-artifact PR'ının Windows işi](https://github.com/nexora-studio-tr/repropack/actions/runs/40129423905/job/120977755289) ve [setup-node PR'ının Windows işi](https://github.com/nexora-studio-tr/repropack/actions/runs/40129438672/job/120977796570), PostgreSQL yönetici yetkili Windows sürecini reddettiği için başarısızdı. Bu sonuçlar güncel Windows sarmalayıcısından önceye ait.
 - **Güncel ReproPack tip hatası:** [Ubuntu tip kontrolü](https://github.com/nexora-studio-tr/repropack/actions/runs/40506695016/job/122197697602), süreç koruyucularında TS2722 ve kimlik testlerinde TS2769 veriyor. PR ayrıca `undici-types` 7 → 8 değiştiriyor. Tip sıkılığını kapatarak hata gizlenmemeli; yeni tip tanımları yeni çalışma sürümü desteği sayılmamalı.
 
-## Sahibinin onayını bekleyen işlem sırası
+## Kalan işler
 
-Önce kontrolleri başarılı iki Actions adayı tek tek incelenip birleştirilsin; her birleştirmeden sonra CI doğrulansın. Sonra eski tabanlı dört Actions dalı güncellenip kalan hatalar araştırılsın. İki Node 26 tip PR'ı bilinçli bir çalışma sürümü kararı verilene kadar açık ve beklemede kalsın; önerilen yol uyumlu Node 24 tiplerinde kalmak. Bu tarihli kayıt kalıcı onay sayılmadan, işlemden önce kanıtlar yenilensin.
+Kontrolleri başarılı iki Actions adayı yukarıdaki onaylı pakette tamamlandı. Sonraki paket önerisi: eski tabanlı dört Actions dalını güncel main üzerine almak, yeni farkları incelemek ve birleştirmeden önce kontrollerini yeniden çalıştırmak. İki Node 26 tip PR'ı bilinçli bir çalışma sürümü kararı verilene kadar birleştirilmeden bekliyor; önerilen yol uyumlu Node 24 tiplerinde kalmak. Bu tarihli kayıt kalıcı onay sayılmadan, işlemden önce kanıtlar yenilensin.

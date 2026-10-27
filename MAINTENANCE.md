@@ -2,11 +2,26 @@
 
 [Türkçe](MAINTENANCE.tr.md) · [Roadmap](ROADMAP.md) · [Governance](GOVERNANCE.md)
 
-Review of the eight open Dependabot PRs in ProofGate and ReproPack. This is a dated decision record: PR heads and CI may change. **No PR was merged, closed or rebased as part of this review.** No verified vulnerability requiring an emergency upgrade was established by this review.
+The initial read-only review covered eight open Dependabot PRs in ProofGate and ReproPack. The owner subsequently approved the two changes recorded below. The original review snapshot is retained for traceability; PR heads and CI may change. No verified vulnerability requiring an emergency upgrade was established by the initial review.
+
+## Applied maintenance
+
+The two approved changes were merged sequentially. Each link identifies the merge commit and its main-branch validation.
+
+| Change                                                                                      | Merge commit                                                                                               | Main CI                                                                                                                    |
+| :------------------------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
+| [ProofGate #1](https://github.com/nexora-studio-tr/proofgate/pull/1): upload-artifact 7.0.2 | [`447891e`](https://github.com/nexora-studio-tr/proofgate/commit/447891e1581d408c1052ab7a0eb49543989cb05e) | [Windows, Ubuntu, browser and execution](https://github.com/nexora-studio-tr/proofgate/actions/runs/40574993962)           |
+| [ReproPack #2](https://github.com/nexora-studio-tr/repropack/pull/2): checkout 7.0.1        | [`2ee039d`](https://github.com/nexora-studio-tr/repropack/commit/2ee039ddf2c5e4ca6e83e9cfa71075cf94310bce) | [Windows, Ubuntu, browser, sandbox and deployment](https://github.com/nexora-studio-tr/repropack/actions/runs/40575567120) |
+
+ProofGate's two PR artifact ZIPs were downloaded and checked against GitHub's SHA-256 digests. They contain the expected Docker, isolation, integration, MCP, deployment and browser reports, with the expected screenshots; both artifact names were also checked on the merged main run. ReproPack retains full action pins and `persist-credentials: false`. Runtime versions and tagged release assets were unchanged. No release-tag publication was triggered; the release workflow's checkout change was reviewed in configuration.
+
+The remaining four Actions PRs and two Node 26 type PRs were not modified by this maintenance packet. Their next actions require a separate approved scope and fresh evidence.
+
+## Initial review snapshot
 
 Compared against ProofGate main [`bd22f4b`](https://github.com/nexora-studio-tr/proofgate/commit/bd22f4ba2fec906d248261281ea6ee0b13e69473) and ReproPack main [`bc90cd0`](https://github.com/nexora-studio-tr/repropack/commit/bc90cd0616dce3b168bf3e75b9336a70bd132ed6). “Current base” refers to those commits. The CI links below ran on the identified PR head and its then-current merge base.
 
-## Recommendations
+### Recommendations at review time
 
 | PR                                                                   | Change                        | Reviewed head  | CI evidence                                                                                    | Next action                                                                                              |
 | :------------------------------------------------------------------- | :---------------------------- | :------------- | :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
@@ -28,6 +43,6 @@ Compared against ProofGate main [`bd22f4b`](https://github.com/nexora-studio-tr/
 - **Older ReproPack failures:** [upload-artifact PR Windows job](https://github.com/nexora-studio-tr/repropack/actions/runs/40129423905/job/120977755289) and [setup-node PR Windows job](https://github.com/nexora-studio-tr/repropack/actions/runs/40129438672/job/120977796570) failed because PostgreSQL refused an administrative Windows process. They predate the current Windows wrapper.
 - **Current ReproPack type failure:** [Ubuntu typecheck](https://github.com/nexora-studio-tr/repropack/actions/runs/40506695016/job/122197697602) reports TS2722 in process guardians and TS2769 in identity tests. The PR also changes `undici-types` 7 → 8. Do not mask this by disabling strictness or claiming that new type declarations add runtime support.
 
-## Proposed order, pending owner approval
+## Remaining work
 
-Review and merge the two passing Actions candidates one at a time, verifying CI after each merge. Next refresh the four older Actions branches and diagnose any remaining failures. Keep both Node 26 type PRs open pending a deliberate runtime-support decision; staying on compatible Node 24 types is the proposed path. Recheck all evidence before action rather than treating this snapshot as permanent approval.
+The two passing Actions candidates were handled in the approved packet above. The proposed next packet is to refresh the four older Actions branches against current main, inspect their new diffs and rerun their checks before any merge. Both Node 26 type PRs remain unmerged pending a deliberate runtime-support decision; staying on compatible Node 24 types is the proposed path. Recheck all evidence before action rather than treating this snapshot as permanent approval.

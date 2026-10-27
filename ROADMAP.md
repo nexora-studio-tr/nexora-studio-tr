@@ -16,7 +16,7 @@ Updated 27 October 2026. Five usable increments were delivered sequentially. The
 
 1. **VoiceBridge: two independent fresh installations.** Invite volunteers, review their setup reports and record accepted evidence in the [beta ledger](https://github.com/nexora-studio-tr/voicebridge/blob/main/docs/BETA-STATUS.md). A recorded demo run alone does not qualify. No reviewed independent installation is claimed yet.
 2. **VoiceBridge: two distinct humans in a live room.** Test both language directions, overlapping speech, private playback and consent cancellation. This remains separate from installation success. [Join the beta](https://github.com/nexora-studio-tr/voicebridge/issues/1).
-3. **Maintenance:** follow the [eight-PR dependency review](MAINTENANCE.md). Two passing Actions updates are candidates for an owner-approved maintenance packet; older failing branches need current-base CI, and Node 26 type upgrades are on hold. This review does not merge them.
+3. **Maintenance:** the two approved Actions updates were merged; their main CI links are recorded in the [dependency review](MAINTENANCE.md). The next proposal is to refresh the four older Actions branches and verify current-base CI before merging. Node 26 type upgrades remain unmerged. Further changes require a separate approved packet.
 
 The other four products remain in maintenance while this feedback is collected. New product scopes and major architecture changes require a separate decision under the [governance guide](GOVERNANCE.md).
 
